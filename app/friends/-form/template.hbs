@@ -1,0 +1,11 @@
+<form {{action 'save' on='submit'}}>
+  <h2>{{errorMessage}}</h2>
+  <div>
+    {{input class='stack' value=model.firstName placeholder='First Name'}}
+    {{input class='stack' value=model.lastName placeholder='Last Name'}}
+    {{input class='stack' value=model.email placeholder='Email'}}
+    {{input class='stack' value=model.twitter placeholder='Twitter'}}
+  </div>
+  {{input class='button' type='submit' value='Save'}}
+  <input class='button' type='button' {{action 'cancel'}} value='Cancel' />
+</form>
