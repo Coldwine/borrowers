@@ -1,0 +1,21 @@
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Notes</th>
+      <th>Borrowed since</th>
+      <th>
+        <label class="checkbox">
+          {{input type='checkbox' checked=showReturned name='showReturned'}}
+          <span class="checkable">Show returned</span>
+        </label>
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each filteredResults as |article|}}
+      {{articles/article-row article=article save='save' articleStates=possibleStates}}
+    {{/each}}
+  </tbody>
+</table>

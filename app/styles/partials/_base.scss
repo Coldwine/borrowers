@@ -1,0 +1,38 @@
+$white: #fff;
+$dark: #333;
+
+body {
+  background: $white;
+  color: $dark;
+  display: block;
+  margin: 80px auto;
+  text-align: center;
+  width: 100%;
+}
+
+table {
+  empty-cells: show;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.friend-profile {
+  text-align: left;
+
+  img {
+    float: left;
+    margin: 0 2em 1em 1em;
+  }
+}
+
+.friend-profile-links {
+  li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+  }
+}
+
+.friends-table thead tr {
+  cursor: pointer;
+}

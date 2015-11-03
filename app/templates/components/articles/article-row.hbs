@@ -1,0 +1,15 @@
+<td>{{article.description}}</td>
+<td>{{article.notes}}</td>
+<td>{{moment-format article.createdAt 'LL'}}</td>
+<td>
+  {{#x-select value=article.state action='saveArticle'}}
+    {{#each articleStates as |state|}}
+      {{#x-option value=state}}{{state}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+</td>
+<td>
+  {{#if article.isSaving}}
+    Saving...
+  {{/if}}
+</td>
